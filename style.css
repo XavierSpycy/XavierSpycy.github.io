@@ -459,7 +459,8 @@ img { max-width: 100%; }
   margin-bottom: 0.5rem;
 }
 .timeline-badge.edu    { background: var(--sky-light);     color: #0369a1; }
-.timeline-badge.work   { background: var(--emerald-light); color: #065f46; }
+.timeline-badge.fulltime { background: var(--emerald-light); color: #065f46; }
+.timeline-badge.intern   { background: #fef9c3; color: #713f12; }
 .timeline-badge.research { background: var(--violet-light);  color: #5b21b6; }
 
 /* ===== PROJECTS ===== */
