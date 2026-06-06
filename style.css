@@ -298,6 +298,41 @@ img { max-width: 100%; }
 }
 
 /* ===== ABOUT ===== */
+.about-kv {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+.about-kv-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+.about-kv-row dt {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--slate-400);
+  min-width: 90px;
+  flex-shrink: 0;
+}
+.about-kv-row dd {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--slate-900);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+.about-logo {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  vertical-align: middle;
+  opacity: 0.75;
+}
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
