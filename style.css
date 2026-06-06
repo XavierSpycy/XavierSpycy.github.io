@@ -116,34 +116,37 @@ img { max-width: 100%; }
 }
 .svg-line-1 {
   animation: flowLine1 12s ease-in-out infinite;
+  stroke-dasharray: 400;
 }
 .svg-line-2 {
   animation: flowLine2 16s ease-in-out infinite;
+  stroke-dasharray: 400;
 }
 .svg-line-3 {
   animation: flowLine3 14s ease-in-out infinite;
+  stroke-dasharray: 400;
 }
 @keyframes flowLine1 {
-  0%, 100% { d: path("M0,400 C360,200 720,600 1080,300 S1440,400 1440,400"); }
-  50%       { d: path("M0,350 C360,550 720,150 1080,500 S1440,350 1440,350"); }
+  0%, 100% { opacity: 0.3; stroke-dashoffset: 0; }
+  50%       { opacity: 0.12; stroke-dashoffset: 60; }
 }
 @keyframes flowLine2 {
-  0%, 100% { d: path("M0,500 C400,300 800,700 1200,400 S1440,500 1440,500"); }
-  50%       { d: path("M0,450 C400,650 800,250 1200,600 S1440,450 1440,450"); }
+  0%, 100% { opacity: 0.25; stroke-dashoffset: 0; }
+  50%       { opacity: 0.08; stroke-dashoffset: -80; }
 }
 @keyframes flowLine3 {
-  0%, 100% { d: path("M0,300 C300,500 700,100 1100,450 S1440,300 1440,300"); }
-  50%       { d: path("M0,350 C300,150 700,550 1100,200 S1440,350 1440,350"); }
+  0%, 100% { opacity: 0.2; stroke-dashoffset: 0; }
+  50%       { opacity: 0.06; stroke-dashoffset: 40; }
 }
 .hero-glow {
   position: absolute;
+  top: 0; left: 0;
   width: 400px; height: 400px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(14,165,233,0.08) 0%, transparent 70%);
   pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: left 0.12s ease, top 0.12s ease;
-  will-change: left, top;
+  transition: transform 0.12s ease;
+  will-change: transform;
 }
 .hero-content {
   position: relative;
