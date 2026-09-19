@@ -336,7 +336,7 @@ img { max-width: 100%; }
 }
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 4rem;
   align-items: start;
 }
@@ -353,14 +353,6 @@ img { max-width: 100%; }
   align-items: center;
   gap: 0.4rem;
   margin-bottom: 0.75rem;
-}
-.skill-group-label {
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--slate-400);
-  min-width: 80px;
 }
 .skill-tag {
   font-size: 0.75rem;
@@ -448,6 +440,41 @@ img { max-width: 100%; }
 .timeline-org { font-size: 0.875rem; color: var(--sky); font-weight: 500; margin-bottom: 0.2rem; }
 .timeline-date { font-size: 0.78rem; color: var(--slate-400); margin-bottom: 0.4rem; }
 .timeline-desc { font-size: 0.85rem; color: var(--slate-500); line-height: 1.5; }
+.timeline-list {
+  list-style: none;
+  margin: 0.55rem 0 0;
+  padding: 0;
+}
+.timeline-list li {
+  position: relative;
+  padding-left: 0.9rem;
+  font-size: 0.85rem;
+  color: var(--slate-500);
+  line-height: 1.5;
+  margin-bottom: 0.25rem;
+}
+.timeline-list li:last-child { margin-bottom: 0; }
+.timeline-list li::before {
+  content: '';
+  position: absolute;
+  left: 0.15rem;
+  top: 0.6em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--sky-mid);
+}
+.timeline-card .skill-group { margin: 0; }
+.timeline-micro-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--slate-400);
+  margin: 0.6rem 0 0.3rem;
+}
+.timeline-micro-label + .timeline-list { margin-top: 0; }
 .timeline-badge {
   display: inline-block;
   font-size: 0.65rem;
